@@ -64,7 +64,6 @@ nav {
 
   li {
     display: inline-block;
-    margin-left: 2rem;
     position: relative;
 
     &.button {
@@ -77,18 +76,30 @@ nav {
     }
   }
 
-  // li.active:after {
-  //   content: " ";
-  //   background: white;
-  //   display: block;
-  //   width: 8px;
-  //   height: 8px;
-  //   position: absolute;
-  //   top: -10px;
-  //   left: 50%;
-  //   margin-left: -4px;
-  //   @include border-radius(5px);
-  // }
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    border: 1px solid transparent;
+
+   &:hover {
+      color: white;
+      border: 1px solid white;
+    }
+  }
+
+  li.active:after {
+    content: " ";
+    background: white;
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -4px;
+    @include border-radius(5px);
+  }
 }
 
 section {
@@ -182,10 +193,13 @@ ul {
 
   nav li {
     font-size: 1.3rem;
-    margin-left: 0.5rem;
 
     span {
       display: none;
+    }
+
+    a {
+      padding: 0.4rem;
     }
   }
 

@@ -1,20 +1,7 @@
   {% include home/head.html %}
 
   <body>
-    <header class="header">
-      <figure class="logo">
-        <img src="assets/images/logo.png">
-      </figure>
-      <nav>
-        <ul>
-          <li>Shop</li>
-          <li>Visit</li>
-          <li>Classes<span> &amp; Demos</span></li>
-          <li>Events</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
-    </header>
+    {% include home/header.html %}
 
     <main class="home" role="main">
       {{ content }}
