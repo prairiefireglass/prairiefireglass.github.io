@@ -6,6 +6,7 @@
 
 @import
   'globals/mixins',
+  'globals/buttons',
   'globals/reset';
 
 
@@ -66,11 +67,6 @@ nav {
     display: inline-block;
     position: relative;
 
-    &.button {
-      border: 2px solid white;
-      padding: 0.5rem 1rem;
-    }
-
     &:first-child {
       margin-left: 0 !important;
     }
@@ -79,12 +75,12 @@ nav {
   a {
     color: white;
     text-decoration: none;
-    padding: 1rem;
-    border: 1px solid transparent;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid transparent;
 
    &:hover {
       color: white;
-      border: 1px solid white;
+      border: 2px solid white;
     }
   }
 
@@ -129,6 +125,11 @@ p {
 ul {
   padding-left: 1.6rem;
   margin-bottom: 1.6rem;
+}
+
+.cta {
+  text-align: center;
+  margin: 2rem 0;
 }
 
 // Base Styles: Small Desktop —————————————————————— •
