@@ -58,6 +58,10 @@ nav {
   top: 5rem;
   right: 4em;
 
+  ul {
+    padding: 0;
+  }
+
   li {
     display: inline-block;
     margin-left: 2rem;
@@ -150,8 +154,16 @@ ul {
 }
 
 @include responsive-break-point(640px) {
+  body {
+    background-position: 0 -200px;
+  }
+
   .header {
     padding: 1rem 2rem 4rem;
+  }
+
+  .logo {
+    max-width: 70%;
   }
 
   nav {
@@ -164,8 +176,8 @@ ul {
     padding: 1rem 0 4rem;
   }
 
-  .logo {
-    max-width: 80%;
+  nav {
+    margin: 0.5rem 0 2.5rem;
   }
 
   nav li {
@@ -178,11 +190,16 @@ ul {
   }
 
   hr {
-    margin: 1rem 0;
+    margin: 2rem 0;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
   }
 
   main {
-    padding: 1rem;
+    padding: 2rem 1.5rem;
   }
 }
 
