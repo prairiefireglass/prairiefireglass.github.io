@@ -1,0 +1,14 @@
+title: Prairie Fire Glass
+description: "FIXME"
+url: "http://prairiefireglass.com"
+
+destination: public
+exclude: [public, Gemfile, Gemfile.lock, Rakefile, README.md]
+
+permalink: /writing/:title/
+markdown: kramdown
+highlighter: pygments
+
+sass:
+  style:    :compressed
+  sass_dir: assets/stylesheets

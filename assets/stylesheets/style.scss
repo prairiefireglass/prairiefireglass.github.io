@@ -1,0 +1,203 @@
+---
+---
+
+// Reset & Mixins ———————————————————————————— •
+@charset "UTF-8";
+
+@import
+  'globals/mixins',
+  'globals/reset';
+
+
+// Base Styles ——————————————————————————————— •
+body {
+  @include border-box;
+  @include font-smoothing(antialiased);
+  background: url(../../assets/images/home/wall2.jpg);
+  background-size: 100%;
+  background-position: 0 -650px;
+  color: $color-text;
+  font-family: $font-sans;
+  font-size: 1.6rem;
+  line-height: 2.0rem;
+  position: relative;
+  font-weight: 400;
+}
+
+a {
+  color: $color-link;
+  &:hover { color: $color-link-hover; }
+  &:active { color: $color-text; }
+}
+
+main {
+  @include border-box;
+  @include clearfix;
+  position: relative;
+  max-width: 840px;
+  background: white;
+  color: #333;
+  padding: 4rem;
+  margin: -6rem auto 5rem;
+}
+
+.header {
+  padding: 2rem 4rem 6rem;
+  margin-bottom: 1.5rem;
+  background: rgba(0,0,0,0.7);
+}
+
+.logo {
+  max-width: 450px;
+
+  img { width: 100%; }
+}
+
+nav {
+  position: absolute;
+  top: 4rem;
+  right: 4em;
+
+  li {
+    display: inline-block;
+    margin-left: 2rem;
+    position: relative;
+
+    &.button {
+      border: 2px solid white;
+      padding: 0.5rem 1rem;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  // li.active:after {
+  //   content: " ";
+  //   background: white;
+  //   display: block;
+  //   width: 8px;
+  //   height: 8px;
+  //   position: absolute;
+  //   top: -10px;
+  //   left: 50%;
+  //   margin-left: -4px;
+  //   @include border-radius(5px);
+  // }
+}
+
+section {
+
+}
+
+h1 {
+  font: 2rem/1.2 'PT Sans Narrow';
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #e73719;
+}
+
+hr {
+  border-top: 4px double #333;
+  height: 0;
+  margin: 2rem -1rem 3rem;
+  clear: left;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-bottom: 1.6rem;
+  font-weight: 300;
+}
+
+ul {
+  padding-left: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+// Base Styles: Small Desktop —————————————————————— •
+@include responsive-break-point(1320px) {
+  .header {
+    text-align: center;
+  }
+
+  .logo {
+    margin: 0 auto;
+  }
+
+  nav {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  main {
+    margin-top: -7rem;
+  }
+}
+
+@include responsive-break-point(960px) {
+  .content { max-width: 860px; }
+}
+
+@include responsive-break-point(860px) {
+  h1 {
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
+
+  h2 {
+    margin: 2rem 0;
+  }
+
+  hr {
+    margin: 0;
+  }
+}
+
+@include responsive-break-point(640px) {
+  body {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+}
+
+@include responsive-break-point(480px) {
+  body {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin: 1rem 0;
+  }
+}
+
+// Fix: iOS Font Sizing —————————————————————— •
+@media screen and (max-device-width: 480px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+  }
+}

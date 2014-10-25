@@ -1,0 +1,25 @@
+  {% include home/head.html %}
+
+  <body>
+    <header class="header">
+      <figure class="logo">
+        <img src="assets/images/logo.png">
+      </figure>
+      <nav>
+        <ul>
+          <li>Shop</li>
+          <li>Visit</li>
+          <li>Classes &amp; Demos</li>
+          <li>Events</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="home" role="main">
+      {{ content }}
+    </main>
+
+    {% include components/analytics.html %}
+  </body>
+</html>
