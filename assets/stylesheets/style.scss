@@ -78,24 +78,16 @@ nav {
     text-decoration: none;
     padding: 0.75rem 1.25rem;
     border: 2px solid transparent;
+    @include transition(ease-in-out border-color 0.25s);
 
-   &:hover {
+    &:hover {
       color: white;
       border: 2px solid white;
     }
   }
 
-  li.active:after {
-    content: " ";
-    background: white;
-    display: block;
-    width: 8px;
-    height: 8px;
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    margin-left: -4px;
-    @include border-radius(5px);
+  li.active a {
+    border: 2px solid white;
   }
 }
 
