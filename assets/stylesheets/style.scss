@@ -234,12 +234,17 @@ ul {
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 1.5rem;
   }
 
   main {
     padding: 2rem 1.5rem;
+  }
+
+  section .etsy-items a {
+    width: 7rem;
+    height: 7rem;
   }
 }
 
