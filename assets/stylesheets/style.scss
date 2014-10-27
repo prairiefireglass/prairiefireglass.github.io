@@ -16,7 +16,8 @@ body {
   @include font-smoothing(antialiased);
   background: url(../../assets/images/home/wall2.jpg);
   background-size: 100%;
-  background-position: 0 -650px;
+  background-position: 0 -600px;
+  background-attachment: fixed;
   color: $color-text;
   font-family: $font-sans;
   font-size: 1.6rem;
@@ -38,7 +39,7 @@ main {
   max-width: 860px;
   background: white;
   color: #333;
-  padding: 4rem;
+  padding: 3rem 4rem 4rem;
   margin: -6rem auto 5rem;
 }
 
@@ -99,20 +100,47 @@ nav {
 }
 
 section {
+  .etsy-items {
+    text-align: center;
+    margin-bottom: 2rem;
 
+    a {
+      position: relative;
+      bottom: 0;
+      display: inline-block;
+      vertical-align: top;
+      width: 12rem;
+      height: 12rem;
+      margin: 0 0.5rem;
+      @include box-shadow(0 3px 3px rgba(0,0,0,0.1));
+      @include transition(ease-in-out all 0.1s);
+
+      &:hover {
+        bottom: 3px;
+        @include box-shadow(0 3px 3px rgba(0,0,0,0.2));
+      }
+    }
+
+    img {
+      min-width: 100%;
+      min-height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
 }
 
 h1 {
-  font: 2rem/1.2 'PT Sans Narrow';
-  margin-bottom: 3rem;
+  font: 1.9rem/1.2 'PT Sans Narrow';
+  margin-bottom: 2rem;
   text-align: center;
-  color: #e73719;
+  font-weight: bold;
 }
 
 hr {
   border-top: 4px double #333;
   height: 0;
-  margin: 2rem -1rem 3rem;
+  margin: 1rem -1rem 3rem;
   clear: left;
 }
 
@@ -180,6 +208,11 @@ ul {
 
   nav {
     margin: 1rem -1rem 2rem;
+  }
+
+  section .etsy-items a {
+    width: 8rem;
+    height: 8rem;
   }
 }
 
