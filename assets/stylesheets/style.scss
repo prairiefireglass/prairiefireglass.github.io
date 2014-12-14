@@ -94,16 +94,16 @@ nav {
 section {
   .etsy-items {
     text-align: center;
-    margin-bottom: 2rem;
+    margin: -1rem 0 2rem;
 
     a {
       position: relative;
       bottom: 0;
       display: inline-block;
-      vertical-align: top;
-      width: 12rem;
-      height: 12rem;
+      vertical-align: middle;
+      width: 14rem;
       margin: 0 0.5rem;
+      line-height: 0;
       @include box-shadow(0 3px 3px rgba(0,0,0,0.1));
       @include transition(ease-in-out all 0.1s);
 
@@ -115,9 +115,7 @@ section {
 
     img {
       min-width: 100%;
-      min-height: 100%;
       max-width: 100%;
-      max-height: 100%;
     }
   }
 }
@@ -151,6 +149,55 @@ ul {
   text-align: center;
   margin: 2rem 0;
 }
+
+.shop-items {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.shop-items figure {
+  width: 12rem;
+  min-height: 15rem;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  padding: 10px;
+  text-align: center;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.shop-items figure:hover {
+  box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+.shop-items figure span {
+  display: block;
+  width: 12rem;
+  height: 14rem;
+  overflow: hidden;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.shop-items figure img {
+  position: absolute;
+  left: -100%;
+  right: -100%;
+  top: -100%;
+  bottom: -100%;
+  margin: auto;
+  width: 100%;
+}
+
+.shop-items figcaption {
+  font-weight: bold;
+  color: black;
+}
+
 
 // Base Styles: Small Desktop —————————————————————— •
 @include responsive-break-point(1320px) {
