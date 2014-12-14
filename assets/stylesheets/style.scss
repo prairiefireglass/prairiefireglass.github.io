@@ -127,6 +127,13 @@ h1 {
   font-weight: bold;
 }
 
+h2 {
+  font: 1.7rem/1.2 'PT Sans';
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
 hr {
   border-top: 4px double #333;
   height: 0;
@@ -138,6 +145,7 @@ p {
   font-size: 1.4rem;
   line-height: 1.4;
   margin-bottom: 1.6rem;
+  letter-spacing: -0.5px;
 }
 
 ul {
