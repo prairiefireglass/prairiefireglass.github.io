@@ -76,7 +76,7 @@ nav {
   a {
     color: white;
     text-decoration: none;
-    padding: 0.75rem 1.25rem;
+    padding: 0.7rem 1.25rem;
     border: 2px solid transparent;
     @include transition(ease-in-out border-color 0.25s);
 
@@ -91,35 +91,6 @@ nav {
   }
 }
 
-section {
-  .etsy-items {
-    text-align: center;
-    margin: -1rem 0 2rem;
-
-    a {
-      position: relative;
-      bottom: 0;
-      display: inline-block;
-      vertical-align: middle;
-      width: 14rem;
-      margin: 0 0.5rem;
-      line-height: 0;
-      @include box-shadow(0 3px 3px rgba(0,0,0,0.1));
-      @include transition(ease-in-out all 0.1s);
-
-      &:hover {
-        bottom: 3px;
-        @include box-shadow(0 3px 3px rgba(0,0,0,0.2));
-      }
-    }
-
-    img {
-      min-width: 100%;
-      max-width: 100%;
-    }
-  }
-}
-
 h1 {
   font: 1.9rem/1.2 'PT Sans Narrow';
   margin-bottom: 2rem;
@@ -128,9 +99,8 @@ h1 {
 }
 
 h2 {
-  font: 1.7rem/1.2 'PT Sans';
-  margin-bottom: 2rem;
-  text-align: center;
+  font: 1.4rem/1.2 'PT Sans';
+  margin-bottom: 0.5rem;
   font-weight: bold;
 }
 
@@ -158,35 +128,41 @@ ul {
   margin: 2rem 0;
 }
 
+.shop {
+  min-height: 30rem;
+}
+
 .shop-items {
   margin: 0 auto;
   text-align: center;
 }
 
 .shop-items figure {
-  width: 12rem;
-  min-height: 15rem;
+  width: 13rem;
+  min-height: 18rem;
   display: inline-block;
   vertical-align: top;
-  margin: 10px;
+  margin: 0.75rem;
   border: 1px solid rgba(0,0,0,0.1);
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  padding: 10px;
   text-align: center;
   transition: box-shadow 0.2s ease-in-out;
 }
 
 .shop-items figure:hover {
   box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+
+  figcaption {
+    color: black;
+  }
 }
 
 .shop-items figure span {
   display: block;
-  width: 12rem;
-  height: 14rem;
+  width: 13rem;
+  height: 15rem;
   overflow: hidden;
   text-align: center;
-  background: #fff;
   position: relative;
   margin-bottom: 5px;
 }
@@ -198,12 +174,16 @@ ul {
   top: -100%;
   bottom: -100%;
   margin: auto;
-  width: 100%;
+  max-width: 20rem;
+  min-height: 14rem;
 }
 
 .shop-items figcaption {
-  font-weight: bold;
-  color: black;
+  color: #666;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  padding: 0.2rem 1rem 0.5rem;
+  transition: color 0.2s ease-in-out;
 }
 
 
