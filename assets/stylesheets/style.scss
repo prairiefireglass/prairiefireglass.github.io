@@ -11,13 +11,17 @@
 
 
 // Base Styles ——————————————————————————————— •
+html {
+  background: url(../../assets/images/home/wall2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
 body {
   @include border-box;
   @include font-smoothing(antialiased);
-  background: url(../../assets/images/home/wall2.jpg);
-  background-size: 100%;
-  background-position: 0 -600px;
-  background-attachment: fixed;
   color: $color-text;
   font-family: $font-sans;
   font-size: 1.6rem;
