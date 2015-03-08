@@ -44,7 +44,7 @@ main {
   background: white;
   color: #333;
   padding: 3rem 4rem 4rem;
-  margin: -6rem auto 5rem;
+  margin: -7rem auto 5rem;
 }
 
 .header {
@@ -232,27 +232,27 @@ ul, ol {
     margin-top: 1rem;
     margin-bottom: 0;
   }
-
-  main {
-    margin-top: -7rem;
-  }
 }
 
 @include responsive-break-point(960px) {
   .content { max-width: 860px; }
 }
 
-@include responsive-break-point(860px) {
+@include responsive-break-point(880px) {
   html {
     font-size: 0.75rem;
   }
-}
 
-@include responsive-break-point(640px) {
   body {
     background-position: 0 -200px;
   }
 
+  main {
+    margin-top: -6rem;
+  }
+}
+
+@include responsive-break-point(640px) {
   .header {
     padding: 1rem 2rem 4rem;
   }
