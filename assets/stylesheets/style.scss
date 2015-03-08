@@ -24,8 +24,8 @@ body {
   @include font-smoothing(antialiased);
   color: $color-text;
   font-family: $font-sans;
-  font-size: 1.6rem;
-  line-height: 2.0rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
   position: relative;
   font-weight: 400;
 }
@@ -117,13 +117,11 @@ hr {
 }
 
 p {
-  font-size: 1.4rem;
-  line-height: 1.4;
   margin-bottom: 1.6rem;
   letter-spacing: -0.5px;
 }
 
-ul {
+ul, ol {
   padding-left: 1.6rem;
   margin-bottom: 1.6rem;
 }
