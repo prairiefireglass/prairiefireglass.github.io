@@ -248,13 +248,26 @@ ul, ol {
   }
 
   main {
-    margin-top: -6rem;
+    margin-top: 0;
+  }
+
+  .header {
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+  }
+
+  .logo {
+    max-width: 350px;
+  }
+
+  nav ul {
+    margin-bottom: 0;
   }
 }
 
 @include responsive-break-point(640px) {
   .header {
-    padding: 1rem 2rem 4rem;
+    padding: 1rem 2rem 0.75rem;
   }
 
   .logo {
@@ -262,7 +275,13 @@ ul, ol {
   }
 
   nav {
-    margin: 1rem -1rem 2rem;
+    margin: 1rem -1rem 1rem;
+  }
+
+  nav li {
+    span {
+      display: none;
+    }
   }
 
   section .etsy-items a {
@@ -272,20 +291,12 @@ ul, ol {
 }
 
 @include responsive-break-point(480px) {
-  .header {
-    padding: 1rem 0 4rem;
-  }
-
   nav {
-    margin: 0 0 2.5rem;
+    margin: 0 0 0.1rem;
   }
 
   nav li {
     font-size: 1.3rem;
-
-    span {
-      display: none;
-    }
 
     a {
       padding: 0.4rem;
