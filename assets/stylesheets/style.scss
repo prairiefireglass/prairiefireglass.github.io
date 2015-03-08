@@ -140,6 +140,14 @@ ul, ol {
   text-align: center;
 }
 
+.shop-items:not(.loading) .busy {
+  display: none;
+}
+
+.shop-items .busy {
+  margin-top: 2rem;
+}
+
 .shop-items a:nth-child(4) {
   display: none;
 }
@@ -181,8 +189,7 @@ ul, ol {
   top: -100%;
   bottom: -100%;
   margin: auto;
-  max-width: 20rem;
-  min-height: 14rem;
+  max-width: 16rem;
 }
 
 .shop-items figcaption {

@@ -9,6 +9,7 @@ getEtsyItems = ->
   $el = $('[data-behavior~=etsy-items]')
 
   if $el.length
+    $el.addClass "loading"
     limit = $el.data 'limit'
 
     if $el.data('featured')
@@ -20,6 +21,7 @@ getEtsyItems = ->
       url: url
       dataType: "jsonp"
       success: (data) ->
+        $el.removeClass "loading"
         if data.ok and data.count > 0
           $.each data.results, (i, item) ->
             $el.append '<a href="' + item.url + '"><figure><span><img src="' + item.Images[0].url_570xN + '"></span><figcaption>' + item.title + '</figcaption></figure></a>'
