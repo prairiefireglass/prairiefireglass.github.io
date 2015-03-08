@@ -70,6 +70,7 @@ nav {
 
   li {
     display: inline-block;
+    vertical-align: top;
     position: relative;
 
     &:first-child {
@@ -290,6 +291,13 @@ ul {
 
     a {
       padding: 0.4rem;
+
+      &:hover { border-color: transparent; }
+    }
+
+    &.active a {
+      border-color: transparent;
+      border-bottom-color: white;
     }
   }
 
