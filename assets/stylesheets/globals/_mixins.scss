@@ -1,5 +1,5 @@
 // Typography ———————————————————————————————— •
-$font-sans: 'PT Sans', Helvetica, 'Lucida Grande', sans-serif;
+$font-sans: rooney-sans, Helvetica, 'Lucida Grande', sans-serif;
 
 @mixin font-smoothing($attr) {
   -webkit-font-smoothing: $attr;

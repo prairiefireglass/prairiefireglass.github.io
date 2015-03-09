@@ -28,6 +28,7 @@ body {
   line-height: 1.4;
   position: relative;
   font-weight: 400;
+  letter-spacing: -0.5px;
 }
 
 a {
@@ -97,14 +98,14 @@ nav {
 }
 
 h1 {
-  font: 1.9rem/1.2 'PT Sans Narrow';
+  font: 1.9rem/1.2 $font-sans;
   margin-bottom: 2rem;
   text-align: center;
   font-weight: bold;
 }
 
 h2 {
-  font: 1.4rem/1.2 'PT Sans';
+  font: 1.4rem/1.2 $font-sans;
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
@@ -118,7 +119,6 @@ hr {
 
 p {
   margin-bottom: 1.6rem;
-  letter-spacing: -0.5px;
 }
 
 ul, ol {
@@ -319,6 +319,10 @@ ul, ol {
 }
 
 @include responsive-break-point(480px) {
+  .header {
+    background-color: rgba(0,0,0,0.8);
+  }
+
   nav {
     margin: 0 -1rem 0.1rem;
   }
@@ -345,6 +349,10 @@ ul, ol {
   h1 {
     font-size: 1.6rem;
     letter-spacing: -1px;
+  }
+
+  main {
+    margin-bottom: 0;
   }
 
   .shop-items a:nth-child(4) {
