@@ -201,6 +201,10 @@ ul, ol {
   transition: color 0.2s ease-in-out;
 }
 
+.shop-items.home .price {
+  display: none;
+}
+
 .contact {
   label {
     display: block;
