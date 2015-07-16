@@ -231,6 +231,10 @@ ul, ol {
   }
 }
 
+.about img {
+  width: 100%;
+}
+
 // Base Styles: Small Desktop —————————————————————— •
 @include responsive-break-point(1320px) {
   .header {
