@@ -1,6 +1,7 @@
 .cta-button {
   display: inline-block;
   padding: 0.75rem 1.5rem 0.75rem;
+  margin-bottom: .2rem;
   font-family: $font-sans;
   font-size: 1.4rem;
   background: $color-link;
@@ -16,3 +17,9 @@
     color: white;
   }
 }
+
+.cta-button--facebook {
+  background: #435f9c;
+  border-bottom: 4px solid rgba(0,0,0,0.4);
+}
+
