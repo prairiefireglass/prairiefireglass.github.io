@@ -82,8 +82,9 @@ nav {
   a {
     color: white;
     text-decoration: none;
-    padding: 0.7rem 1.25rem;
+    padding: 0.5rem 1.25rem;
     border: 2px solid transparent;
+    border-radius: 10rem;
     @include transition(ease-in-out border-color 0.25s);
 
     &:hover {
@@ -94,6 +95,7 @@ nav {
 
   li.active a {
     border: 2px solid white;
+    border-radius: 10rem;
   }
 }
 
@@ -337,16 +339,16 @@ main img {
 
   nav li {
     font-size: 1.3rem;
+    margin: 0 -.15rem;
 
     a {
-      padding: 0.4rem;
-
-      &:hover { border-color: transparent; }
+      padding: 0.05rem .7rem .1rem;
+      border: 1px solid transparent;
     }
 
-    &.active a {
-      border-color: transparent;
-      border-bottom-color: white;
+    a:hover, &.active a {
+      @include transition(none);
+      border-width: 1px;
     }
   }
 
