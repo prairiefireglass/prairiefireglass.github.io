@@ -112,6 +112,20 @@ $color-spot: #FF548F;
   @media only screen and (max-width: $media) { @content; }
 }
 
+@mixin media($query) {
+  @if $query == small {
+    @media (max-width: 767px) { @content; } // Handhelds - up to portrait tablet
+  } @else if $query == medium {
+    @media (min-width: 768px) { @content; } // Tablets - Portrait
+  } @else if $query == large {
+    @media (min-width: 992px) { @content; } // Tablets - Landscape
+  } @else if $query == x-large {
+    @media (min-width: 1600px) { @content; } // Desktops
+  } @else {
+    @media (#{$query}) { @content; } // Custom
+  }
+}
+
 
 // Retina ———————————————————————————————————— •
 @mixin retinafy($image, $width, $height) {

@@ -25,7 +25,11 @@
 
 .cta-button--back-up {
   font-size: 1.2rem;
-  background: #333;
+  background: #666;
   border-bottom: 4px solid rgba(0,0,0,0.4);
 }
 
+.facebook-button {
+  @include border-box;
+  text-align: center;
+}

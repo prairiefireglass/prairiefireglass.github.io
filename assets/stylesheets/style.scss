@@ -29,6 +29,8 @@ body {
   position: relative;
   font-weight: 400;
   letter-spacing: -0.5px;
+  margin-bottom: 4rem;
+  text-align: center;
 }
 
 a {
@@ -47,6 +49,7 @@ main {
   padding: 3rem 4rem 4rem;
   margin: -7rem auto 0;
   border-radius: 0 0 1rem 1rem;
+  text-align: left;
 }
 
 .header {
@@ -114,9 +117,9 @@ h2 {
 }
 
 hr {
-  border-top: 4px double #333;
+  border-top: 4px double #ccc;
   height: 0;
-  margin: 1rem -1rem 3rem;
+  margin: 3rem -1rem 3rem;
   clear: left;
 }
 
@@ -129,15 +132,42 @@ ul, ol {
   margin-bottom: 1.6rem;
 }
 
-small {
-  font-size: 1.1rem;
-}
-
 .cta {
   text-align: center;
   margin: 2rem 0;
 }
 
+.centered {
+  text-align: center;
+}
+
+.page-image {
+  margin-bottom: 2rem;
+  text-align: center;
+
+  img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.page-image__caption {
+  font-size: 1.1rem;
+}
+
+.site-footer {
+  position: relative;
+  display: inline-block;
+  max-width: 350px;
+  padding: 1.5rem 2rem;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(0,0,0,.8);
+  border-radius: 0 0 1rem 1rem;
+}
+
+// SHOP PAGE
 .shop {
   min-height: 30rem;
 }
@@ -212,6 +242,8 @@ small {
   display: none;
 }
 
+
+// CONTACT PAGE
 .contact {
   label {
     display: block;
@@ -237,10 +269,6 @@ small {
     outline: none;
     resize: none;
   }
-}
-
-main p img {
-  width: 100%;
 }
 
 // Base Styles: Small Desktop —————————————————————— •
@@ -314,7 +342,7 @@ main p img {
 
 @include responsive-break-point(640px) {
   html {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .header {
@@ -322,7 +350,7 @@ main p img {
   }
 
   .logo {
-    max-width: 65%;
+    max-width: 70%;
   }
 
   nav {
@@ -340,7 +368,7 @@ main p img {
   }
 
   nav {
-    margin: 0 -1rem 0.1rem;
+    margin: .2rem -1rem 0.1rem;
   }
 
   nav li {
@@ -349,12 +377,12 @@ main p img {
 
     a {
       padding: 0.05rem .7rem .2rem;
-      border: 1px solid transparent;
+      border: 1.5px solid transparent;
     }
 
     a:hover, &.active a {
       @include transition(none);
-      border-width: 1px;
+      border-width: 1.5px;
     }
   }
 
