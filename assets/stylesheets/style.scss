@@ -319,9 +319,6 @@ ul, ol {
   nav li span {
     display: none;
   }
-
-  .shop-items figure {
-  }
 }
 
 @include responsive-break-point(640px) {
@@ -330,7 +327,7 @@ ul, ol {
   }
 
   .header {
-    padding: 1rem 2rem 0.75rem;
+    padding: 1rem 2rem 0.2rem;
   }
 
   .logo {
@@ -338,7 +335,7 @@ ul, ol {
   }
 
   nav {
-    margin: 1rem -1rem 1rem;
+    margin: 1rem -1rem 0rem;
   }
 
   main {
@@ -352,7 +349,11 @@ ul, ol {
   }
 
   nav {
-    margin: .2rem -1rem 0.1rem;
+    margin: .2rem -1rem .5rem;
+  }
+
+  nav ul {
+    margin-bottom: 0;
   }
 
   nav li {
