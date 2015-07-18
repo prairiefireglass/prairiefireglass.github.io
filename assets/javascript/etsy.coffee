@@ -24,7 +24,7 @@ getEtsyItems = ->
         $el.removeClass "loading"
         if data.ok and data.count > 0
           $.each data.results, (i, item) ->
-            $el.append '<a href="' + item.url + '"><figure><span><img src="' + item.Images[0].url_570xN + '"></span><figcaption>' + item.title + '<div class="price">$' + Math.round(item.price) + '</div></figcaption></figure></a>'
+            $el.append '<figure><span><a href="' + item.url + '"><img src="' + item.Images[0].url_570xN + '"><figcaption>' + item.title + '<div class="price">$' + Math.round(item.price) + '</div></figcaption></a></span></figure>'
             return
         else
           console.log data.error
