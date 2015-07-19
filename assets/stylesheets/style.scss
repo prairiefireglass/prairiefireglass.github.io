@@ -272,6 +272,17 @@ ul, ol {
   }
 }
 
+
+// EVENTS
+.event__description {
+  display: block;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin-top: .2rem;
+}
+
+
+
 // Base Styles: Small Desktop —————————————————————— •
 @include responsive-break-point(1320px) {
   .header {
