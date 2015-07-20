@@ -1,9 +1,9 @@
 title: Prairie Fire Glass
-description: "FIXME"
+description: "Prairie Fire Glass is a professional glassworking studio and gallery in Monticello, Illinois."
 url: "http://prairiefireglass.com"
 
 destination: public
-exclude: [public, Gemfile, Gemfile.lock, Rakefile, README.md]
+exclude: [public, Rakefile, README.md]
 
 permalink: /writing/:title/
 markdown: kramdown
