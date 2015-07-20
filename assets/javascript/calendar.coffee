@@ -25,7 +25,7 @@ requestCalendarEvents = ($el) ->
       console.log response['items']
       $el.removeClass "loading"
       $.each response.items, (i, item) ->
-        $el.append '<p><strong>' + item.summary + '</strong><br>' + strftime('%A, %B %e', new Date(item.start.dateTime)) + ' — ' + strftime('%A, %B %e', new Date(item.end.dateTime)) + '<br>' + strftime('%l:%M%P', new Date(item.start.dateTime)) + ' — ' + strftime('%l:%M%P', new Date(item.end.dateTime)) + '<span class="event__description">' + item.description + '<br>' + '<a href="' + item.htmlLink + '">Add to your Google Calendar</a></span></p>'
+        $el.append '<p class="event"><strong>' + item.summary + '</strong><br>' + strftime('%A, %b %e', new Date(item.start.dateTime)) + ' — ' + strftime('%A, %b %e, %Y', new Date(item.end.dateTime)) + '<br>' + strftime('%l:%M%P', new Date(item.start.dateTime)) + ' — ' + strftime('%l:%M%P', new Date(item.end.dateTime)) + '<span class="event__description">' + item.description + '<br>' + '<a href="' + item.htmlLink + '" class="cta-button cta-button--add-event">+ Add to your Google Calendar</a></span></p>'
       return
     error: (response) ->
       console.log 'doh'
