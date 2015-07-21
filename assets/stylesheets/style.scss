@@ -142,6 +142,16 @@ ul, ol {
   text-align: center;
 }
 
+.loadable:not(.loading) .busy {
+  display: none;
+}
+
+.busy {
+  font-weight: bold;
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .page-image {
   margin-bottom: 2rem;
   text-align: center;
@@ -181,16 +191,6 @@ ul, ol {
   -webkit-flex-flow: row wrap;
   -webkit-justify-content: center;
   justify-content: center;
-}
-
-.shop-items:not(.loading) .busy {
-  display: none;
-}
-
-.shop-items .busy {
-  font-weight: bold;
-  margin-top: 2rem;
-  text-align: center;
 }
 
 .shop-items figure:nth-child(4) {

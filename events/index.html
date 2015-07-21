@@ -20,7 +20,12 @@ layout: home
     <hr>
 
     <h1>Here&rsquo;s what&rsquo;s coming up soon:</h1>
-    <div data-behavior="calendar-events"></div>
+    <div class="loadable" data-behavior="calendar-events">
+      <div class="busy">
+        <h2>Loading events...</h2>
+        <img src="/assets/images/ripple.svg" width="80">
+      </div>
+    </div>
     <p class="centered">
       <span class="event__description">
         <a href="/events/grid.html">See all events month-by-month</a> &bull;
