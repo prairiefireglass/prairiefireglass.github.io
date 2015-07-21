@@ -133,6 +133,18 @@ ul, ol {
   margin-bottom: 1.6rem;
 }
 
+.site-footer {
+  position: relative;
+  display: inline-block;
+  max-width: 350px;
+  padding: 1.5rem 2rem;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(0,0,0,.8);
+  border-radius: 0 0 1rem 1rem;
+}
+
+// UTLITY CLASSES
 .cta {
   text-align: center;
   margin: 2rem 0;
@@ -165,17 +177,6 @@ ul, ol {
 
 .page-image__caption {
   font-size: 1.1rem;
-}
-
-.site-footer {
-  position: relative;
-  display: inline-block;
-  max-width: 350px;
-  padding: 1.5rem 2rem;
-  margin: 0 auto;
-  text-align: center;
-  background: rgba(0,0,0,.8);
-  border-radius: 0 0 1rem 1rem;
 }
 
 // SHOP PAGE
