@@ -3,6 +3,8 @@ title: "Prairie Fire Glass"
 layout: home
 ---
 <script src="/assets/javascript/etsy.js"></script>
+<script src="/assets/javascript/strftime.js"></script>
+<script src="/assets/javascript/home.js"></script>
 <section>
   <header>
     <h1>
@@ -27,17 +29,24 @@ layout: home
       Our unique retail store has a gallery in the front and a working studio in the back, so when you <a href="visit/">visit in person</a>, you can watch live glassblowing demos while browsing the extensive variety of finished pieces.
     </p>
     <p>
-      We also stock mixed-media work from local artists — you’ll find everything from greeting cards to paintings, sculpture, and photography.
+      Along with the glass, we stock mixed-media work from local artists — you’ll find everything from greeting cards to paintings, sculpture, and photography.
     </p>
     <figure class="page-image">
       <img src="/assets/images/home/display.jpg" style="max-width: 700px;">
     </figure>
     <p>
-      Prairie Fire Glass is a <a href="/about">family-run small business</a>, and we’re proud to be one of the eclectic restaurants and shops in downtown Monticello. Monticello’s a hidden gem that’s a great place to visit, but if you can’t make it in person, no problem! You can <a href="shop/">order direct</a> and we&rsquo;ll ship your items in just a few days.
+      Prairie Fire Glass is a <a href="/about/">family-run small business</a>, and we’re proud to be one of the eclectic restaurants and shops in downtown Monticello. Monticello’s a hidden gem that’s a great place to visit, but if you can’t make it in person, no problem! You can <a href="shop/">order direct</a> and we&rsquo;ll ship your items in just a few days.
     </p>
-    <p>
-      In the warmer months, Jim takes the glass on the road to several Midwest art festivals. <a href="shows/">Check the schedule</a> to see if he&rsquo;s coming to a town near you.
-    </p>
+    <div class="calendar-events" data-role="calendar-events-container">
+      <p>We also keep busy with events like seasonal art festivals and glassblowing classes. Here’s what’s on the calendar for the next few weeks:</p>
+      <div data-behavior="calendar-events" style="padding-top: 1.5rem; margin-bottom: 1.5rem; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; font-size: 1.2rem;"></div>
+      <p>Check the <a href="/events/">full schedule</a> for more details.</p>
+    </div>
+    <div class="calendar-events" data-role="no-events">
+      <p>We also keep busy with events like seasonal art festivals and glassblowing classes. Check the <a href="/events/">full schedule</a> for more details.</p>
+    </div>
+
+    <p class="centered" style="margin-bottom: 0;"><strong>Thanks so much for stopping by!</strong></p>
   </article>
 </section>
 

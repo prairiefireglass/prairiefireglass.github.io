@@ -144,6 +144,11 @@ ul, ol {
   border-radius: 0 0 1rem 1rem;
 }
 
+.copyright {
+  font-size: 1rem;
+  margin-top: .3rem;
+}
+
 // UTLITY CLASSES
 .cta {
   text-align: center;
@@ -276,6 +281,10 @@ ul, ol {
 
 
 // EVENTS
+.calendar-events {
+  display: none;
+}
+
 .event {
   line-height: 1.3;
 }
