@@ -4,3 +4,11 @@
   {% include components/facebook.html %}
 </footer>
 
+<div class="copyright" data-role="copyright">
+  &copy;
+  <script>
+    $(function() {
+      $('[data-role~=copyright]').append(strftime('%Y', new Date()));
+    });
+  </script>
+</div>
