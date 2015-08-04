@@ -6,9 +6,33 @@ $ ->
 
 getUpcomingEvents = ->
   $el = $('[data-behavior~=calendar-events]')
+  requestCalendarEvents $el if $el.length
 
-  if $el.length
-    requestCalendarEvents $el
+getStartDate = (item) ->
+  if item.start.date
+    new Date(item.start.date)
+  else if item.start.dateTime
+    new Date(item.start.dateTime)
+
+getEndDate = (item) ->
+  if item.end.date
+    # subtract a day to render all-day spanned events
+    d = new Date(item.end.date)
+    new Date(d.setDate(d.getDate() - 1))
+  else if item.end.dateTime
+    new Date(item.end.dateTime)
+
+createEvent = (item) ->
+  startDate = getStartDate(item)
+  endDate = getEndDate(item)
+  $newEvent = $('<div/>',
+    id: item.id
+    class: 'event'
+  )
+  $newEvent.append('<strong>' + item.summary + '</strong>')
+  $newEvent.append('<span class="event__dates">' + strftime('%A, %b %e', getStartDate(item)) + ' — ' + strftime('%A, %b %e, %Y', getEndDate(item)) + '</span>')
+  $newEvent.append('<span class="event__times">' + strftime('%l:%M%P', new Date(item.start.dateTime)) + ' — ' + strftime('%l:%M%P', new Date(item.end.dateTime)) + '</span>') if item.start.dateTime and item.end.dateTime
+  return $newEvent
 
 requestCalendarEvents = ($el) ->
   mykey = 'AIzaSyC1B0WHEVcWYeJqwYLYlD6qkyJm0Zerz3g'
@@ -24,7 +48,7 @@ requestCalendarEvents = ($el) ->
       if response.items.length
         $el.closest('[data-role~=calendar-events-container]').show()
         $.each response.items, (i, item) ->
-          $el.append '<p class="event"><strong>' + item.summary + '</strong><br>' + strftime('%A, %b %e', new Date(item.start.dateTime)) + ' — ' + strftime('%A, %b %e, %Y', new Date(item.end.dateTime)) + '<br>' + strftime('%l:%M%P', new Date(item.start.dateTime)) + ' — ' + strftime('%l:%M%P', new Date(item.end.dateTime)) + '</p>'
+          $el.append createEvent(item)
       else
         $('[data-role~=no-events]').show()
       return
