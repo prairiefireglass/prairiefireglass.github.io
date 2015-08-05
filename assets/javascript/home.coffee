@@ -25,7 +25,7 @@ getEndDate = (item) ->
 createEvent = (item) ->
   startDate = getStartDate(item)
   endDate = getEndDate(item)
-  $newEvent = $('<div/>',
+  $newEvent = $('<p/>',
     id: item.id
     class: 'event'
   )
@@ -37,8 +37,9 @@ createEvent = (item) ->
 requestCalendarEvents = ($el) ->
   mykey = 'AIzaSyC1B0WHEVcWYeJqwYLYlD6qkyJm0Zerz3g'
   calendarid = 'd4j83rh23o1v1i4p4tpoa1f6g4@group.calendar.google.com'
-  timeMin = new Date().toISOString()
-  timeMax = new Date(+new Date + 12096e5).toISOString()
+  today   = new Date()
+  timeMin = today.toISOString()
+  timeMax = new Date(today.setDate(today.getDate() + 30)).toISOString()
 
   $.ajax
     type: 'GET'
