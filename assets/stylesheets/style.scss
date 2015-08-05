@@ -42,6 +42,7 @@ a {
 main {
   @include border-box;
   @include clearfix;
+  display: block;
   position: relative;
   max-width: 860px;
   background: white;
@@ -191,7 +192,9 @@ ul, ol {
 }
 
 .shop-items {
+  display: block;
   display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -205,7 +208,9 @@ ul, ol {
 }
 
 .shop-items figure {
+  display: inline-block;
   display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
   margin: 5px;
   background: white;
