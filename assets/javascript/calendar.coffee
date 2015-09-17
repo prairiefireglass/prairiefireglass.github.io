@@ -10,15 +10,14 @@ getUpcomingEvents = ->
 
 getStartDate = (item) ->
   if item.start.date
-    new Date(item.start.date)
+    d = new Date(item.start.date)
+    new Date(d.setDate(d.getDate() + 1))
   else if item.start.dateTime
     new Date(item.start.dateTime)
 
 getEndDate = (item) ->
   if item.end.date
-    # subtract a day to render all-day spanned events
-    d = new Date(item.end.date)
-    new Date(d.setDate(d.getDate() - 1))
+    new Date(item.end.date)
   else if item.end.dateTime
     new Date(item.end.dateTime)
 
