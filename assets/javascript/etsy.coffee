@@ -13,9 +13,9 @@ getEtsyItems = ->
     limit = $el.data 'limit'
 
     if $el.data('featured')
-      url = "https://openapi.etsy.com/v2/shops/JimDowney/listings/featured.js?limit=#{limit}&includes=Images:1&api_key=oo1odlylo4soh5rggyekdtfk"
+      url = "https://openapi.etsy.com/v2/shops/JimDowney/listings/featured.js?limit=#{limit}&includes=Images:1&api_key=s8b6yegjtvhbeoz1nmgs0n9n"
     else
-      url = "https://openapi.etsy.com/v2/shops/JimDowney/listings/active.js?limit=#{limit}&includes=Images:1&api_key=oo1odlylo4soh5rggyekdtfk"
+      url = "https://openapi.etsy.com/v2/shops/JimDowney/listings/active.js?limit=#{limit}&includes=Images:1&api_key=s8b6yegjtvhbeoz1nmgs0n9n"
 
     $.ajax
       url: url
