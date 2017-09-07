@@ -161,6 +161,10 @@ ul, ol {
   text-align: center;
 }
 
+.small {
+  font: 1rem/1.1 $font-sans;
+}
+
 .loadable:not(.loading) .busy {
   display: none;
 }
@@ -201,10 +205,6 @@ ul, ol {
   -webkit-flex-flow: row wrap;
   -webkit-justify-content: center;
   justify-content: center;
-}
-
-.shop-items figure:nth-child(5) {
-  display: none;
 }
 
 .shop-items figure {
